@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    about
+      news
   </div>
 </template>
 

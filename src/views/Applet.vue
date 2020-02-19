@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    about
+      小程序定制
   </div>
 </template>
 

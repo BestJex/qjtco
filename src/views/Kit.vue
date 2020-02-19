@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    about
+      工具
   </div>
 </template>
 

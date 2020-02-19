@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    about
+      公众号定制
   </div>
 </template>
 

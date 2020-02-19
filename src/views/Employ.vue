@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    about
+      招聘
   </div>
 </template>
 

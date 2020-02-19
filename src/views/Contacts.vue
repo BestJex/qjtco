@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    about
+      联系我们
   </div>
 </template>
 

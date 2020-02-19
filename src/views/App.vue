@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    about
+      app定制
   </div>
 </template>
 
