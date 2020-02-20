@@ -37,6 +37,15 @@ const routes = [
     component: () => import('../views/News.vue')
   },
   {
+    // 资讯详情
+    path: '/newsDetails',
+    name: 'NewsDetails',
+    props:true,
+    // props接受布尔型数据
+    // query更加类似于我们ajax中get传参，params则类似于post，说的再简单一点，前者在浏览器地址栏中显示参数，后者则不显示，这里用到的是params，必须写name
+    component: () => import('../views/NewsDetails.vue')
+  },
+  {
     // 招募令
     path: '/employ',
     name: 'Employ',

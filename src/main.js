@@ -5,10 +5,12 @@ import router from './router'
 // 引入iconfont字体库
 import '@/assets/font/iconfont.css'
 // 按需引入element-ui
-import { Carousel,CarouselItem } from "element-ui";
+import { Carousel, CarouselItem, Pagination } from "element-ui";
 // 首页轮播图
 Vue.use(Carousel);
 Vue.use(CarouselItem);
+// 分页器
+Vue.use(Pagination);
 
 
 

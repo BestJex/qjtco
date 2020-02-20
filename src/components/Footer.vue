@@ -3,7 +3,7 @@
     <div id="footer">
       <div class="contactWay">
         <div class="weChat">
-          <img src="../assets/image/WeChat.png" alt="青玖科技官方微信服务号" />
+          <img :src="contactWay.weChat" alt="青玖科技官方微信服务号" />
           <h3>官方微信服务号</h3>
         </div>
         <ul>
@@ -44,6 +44,8 @@ export default {
   data() {
     return {
       contactWay: {
+        // 官方微信服务号
+        weChat: "https://www.qjtco.com/assets/image/WeChat.png",
         // 网站底部部邮箱
         email: "qjtcoonline@163.com",
         // 网站底部电话

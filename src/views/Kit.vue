@@ -1,24 +1,205 @@
 <template>
   <div class="wrapper">
-      工具
+    <div id="kitBorder">
+      <h2>工具合集（即将推出）</h2>
+      <div v-for="(item,index) in kitItem" :key="index">
+        <h3 v-text="item.itemClass"></h3>
+        <ul>
+          <li v-for="(item2,index2) in item.list" :key="index2">
+            <a :href="item2.href" v-text="item2.title"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  components: {},
-  props: {},
   data() {
     return {
+      kitItem: [
+        {
+          itemClass: "转换类工具:",
+          list: [
+            {
+              title: "pdf转word",
+              href: "#"
+            },
+            {
+              title: "pdf转excel",
+              href: "#"
+            },
+            {
+              title: "pdf转ppt",
+              href: "#"
+            },
+            {
+              title: "psd转png",
+              href: "#"
+            },
+            {
+              title: "psd转jpg",
+              href: "#"
+            },
+            {
+              title: "png转jpg",
+              href: "#"
+            },
+            {
+              title: "jpg转png",
+              href: "#"
+            }
+          ]
+        },
+        {
+          itemClass: "下载工具:",
+          list: [
+            {
+              title: "抖音视频无水印下载",
+              href: "#"
+            },
+            {
+              title: "今日头条视频下载",
+              href: "#"
+            },
+            {
+              title: "YouTube视频下载",
+              href: "#"
+            },
+            {
+              title: "bilibili视频下载",
+              href: "#"
+            }
+          ]
+        },
+        {
+          itemClass: "在线开发工具:",
+          list: [
+            {
+              title: "在线photoshop",
+              href: "#"
+            },
+            {
+              title: "在线压缩代码",
+              href: "#"
+            },
+            {
+              title: "在线json数据格式化",
+              href: "#"
+            },
+            {
+              title: "php在线工具",
+              href: "#"
+            },
+            {
+              title: "python在线工具",
+              href: "#"
+            },
+            {
+              title: "node.js在线工具",
+              href: "#"
+            },
+            {
+              title: "js压缩/解压工具",
+              href: "#"
+            },
+            {
+              title: "html压缩/解压工具",
+              href: "#"
+            },
+            {
+              title: "在线Markdown",
+              href: "#"
+            },
+            {
+              title: "在线图片压缩",
+              href: "#"
+            },
+            {
+              title: "rgb16进制工具",
+              href: "#"
+            },
+            {
+              title: "在线配色",
+              href: "#"
+            }
+          ]
+        }
+      ]
     };
-  },
-  watch: {},
-  computed: {},
-  methods: {},
-  created() {},
-  mounted() {}
+  }
 };
 </script>
 <style lang="less" scoped>
-.wrapper{}
+.wrapper {
+  #kitBorder {
+    h2 {
+      margin: 50px auto 30px;
+      text-align: center;
+      color: #3b3c3f;
+      font-size: 1.8em;
+    }
+    div {
+      margin-bottom: 30px;
+      h3 {
+        width: 1200px;
+        margin: auto;
+        text-align: left;
+        padding-bottom: 20px;
+        color: #333333;
+      }
+      ul {
+        margin: auto;
+        width: 1200px;
+        height: auto;
+        overflow: hidden;
+        li {
+          width: 194px;
+          height: 60px;
+          margin: 10px 20px;
+          float: left;
+          text-align: center;
+          line-height: 60px;
+          border: 3px solid #666666;
+          border-radius: 18px;
+          a {
+            width: 100%;
+            height: 100%;
+            display: block;
+            color: #666666;
+            font-size: 1.1em;
+          }
+          &:hover {
+            border: 3px solid #0092ff;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    #kitBorder {
+      div {
+        width: 93%;
+        height: auto;
+        overflow: hidden;
+        margin: 30px auto;
+        h3 {
+          width: 100%;
+        }
+        ul {
+          width: 100%;
+          display: -webkit-flex;
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          li {
+            flex: 40%;
+          }
+        }
+      }
+    }
+  }
+}
 </style>
