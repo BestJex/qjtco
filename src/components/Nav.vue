@@ -1,9 +1,4 @@
 <template>
-<!-- <div id="nav">
-      <router-link to="/">Home</router-link>|
-      <router-link to="/about">About</router-link>
-    </div> -->
-  
   <div class="wrapper">
     <!-- header开始 -->
     <div id="header">
@@ -24,14 +19,16 @@
       <div id="nav">
         <!-- 公司logo -->
         <h1>
-          <img src="../assets/image/qjtcoLogo.png" alt="青玖科技有限公司" />
+          <a href="https://www.qjtco.com/">
+            <img src="https://www.qjtco.com/assets/image/qjtcoLogo.png" alt="青玖科技有限公司" />
+          </a>
         </h1>
         <!-- 响应式导航栏按钮 -->
         <span class="muen" @click="navbtn">
           <i :class="navBtnClass"></i>
         </span>
         <!-- 导航栏列表 -->
-        <ul :class="{'navActive':navShow}">
+        <ul :class="{'navActive':navShow}" @click="navhidden">
           <li>
             <router-link to="/">首页</router-link>
           </li>
@@ -84,6 +81,10 @@ export default {
         this.navBtnClass = "iconfont icon-daohang1";
       }
       this.navShow = !this.navShow; //通过navShow的取反控制是否绑定navActive类
+    },
+    navhidden: function() {
+      this.navShow = !this.navShow;
+      this.navBtnClass = "iconfont icon-daohang1";
     }
   }
 };

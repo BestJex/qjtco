@@ -62,7 +62,7 @@
           </li>
         </ul>
         <div class="browserImg">
-          <img src="../assets/image/browser.jpg" alt="主流浏览器" />
+          <img src="https://www.qjtco.com/assets/image/browser.jpg" alt="主流浏览器" />
         </div>
         <h3>承诺与优惠</h3>
         <ul>

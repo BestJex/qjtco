@@ -108,6 +108,19 @@
 
 <script>
 export default {
+  metaInfo: {
+    title: "青玖科技-首页",
+    meta: [
+      {
+        name: "keywords",
+        content: ""
+      },
+      {
+        name: "description",
+        content: "青玖科技有限公司致力于创新开发简洁高效互联网产品,拥有十年从业经验的专业技术团队能够为客户提供小程序、公众号、网站定制开发、运维推广、服务器部署、软件运维推广、新媒体运营、企业营销等服务。青玖科技一站式服务平台期待您的到来"
+      }
+    ]
+  },
   data() {
     return {
       imgHeight: "", //轮播图高度

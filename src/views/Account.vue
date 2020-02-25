@@ -6,7 +6,7 @@
         <i class="iconfont icon-sanjiaoyou"></i> 公众号定制
       </p>
       <div>
-        <img src="../assets/image/account.jpg" alt="公众号定制营销策划" />
+        <img src="https://www.qjtco.com/assets/image/account.jpg" alt="公众号定制营销策划" />
       </div>
     </div>
   </div>

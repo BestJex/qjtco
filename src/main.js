@@ -11,17 +11,22 @@ Vue.use(Carousel);
 Vue.use(CarouselItem);
 // 分页器
 Vue.use(Pagination);
-
-
+// 引入vue-meta-info
+import MetaInfo from 'vue-meta-info'
+Vue.use(MetaInfo)
 
 
 // 版权声明及作者
 console.log("©本站版权为青玖科技有限公司所有-未经许可不得盗用，违者将追究法律责任。This site copyright QING JIU Technology Corporation  all - without permission not to embezzle, offenders will beinvestigated for legal responsibility. ");
 console.log("作者：赵旭 邮箱：zhao_xu_d@163.com  author：zhaoxu Email：zhao_xu_d@163.com");
 
+
 Vue.config.productionTip = false
 
 new Vue({
   router,
-  render: h => h(App)
+  render: h => h(App),
+  mounted () {
+    document.dispatchEvent(new Event('render-event'))
+  }
 }).$mount('#app')

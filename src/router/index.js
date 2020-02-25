@@ -9,7 +9,7 @@ const routes = [
     // 首页
     path: '/',
     name: 'Home',
-    component: Home,
+    component: Home
   },
   {
     // 品牌
@@ -38,10 +38,9 @@ const routes = [
   },
   {
     // 资讯详情
-    path: '/newsDetails',
+    path: '/newsDetails/:newsId',//  必须写相对而言parmas比query更严格，如果不写/:newsId刷新页面后将丢失传递过来的数据
     name: 'NewsDetails',
-    props:true,
-    // props接受布尔型数据
+    props: true, //解耦
     // query更加类似于我们ajax中get传参，params则类似于post，说的再简单一点，前者在浏览器地址栏中显示参数，后者则不显示，这里用到的是params，必须写name
     component: () => import('../views/NewsDetails.vue')
   },
@@ -57,7 +56,7 @@ const routes = [
     name: 'Contacts',
     component: () => import('../views/Contacts.vue')
   },
-// 以下为定制网站小程序公众号APP介绍页路由
+  // 以下为定制网站小程序公众号APP介绍页路由
   {
     // 网站定制
     path: '/webSite',
