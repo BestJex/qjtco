@@ -27,3 +27,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### 项目相关信息记录 markdown
 ### 软件使用：vscode node chrome浏览器 Nginx FlashFXP FinalShell
 ### 线上地址：http://47.95.12.147/
+### concurrently插件用于支持并行运行 运行vue-cli的时候同时启动json-server

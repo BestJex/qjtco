@@ -108,21 +108,31 @@
 
 <script>
 export default {
-  metaInfo: {
-    title: "青玖科技-首页",
-    meta: [
-      {
-        name: "keywords",
-        content: ""
-      },
-      {
-        name: "description",
-        content: "青玖科技有限公司致力于创新开发简洁高效互联网产品,拥有十年从业经验的专业技术团队能够为客户提供小程序、公众号、网站定制开发、运维推广、服务器部署、软件运维推广、新媒体运营、企业营销等服务。青玖科技一站式服务平台期待您的到来"
-      }
-    ]
+  name: "home",
+  metaInfo() {
+    return {
+      title: this.meta.title,
+      meta: [
+        {
+          name: "keywords",
+          content: this.meta.keywords
+        },
+        {
+          name: "description",
+          content: this.meta.description
+        }
+      ]
+    };
   },
   data() {
     return {
+      meta: {
+        title:
+          "青玖科技有限公司官网-微信小程序定制-公众号定制-网站专业定制开发-app定制-运营推广-营销-十年从业经验专业技术团队",
+        keywords:
+          "网站定制,公众号定制,小程序定制,app定制,运营推广,营销,定制开发,做网站,做小程序,做软件,定制开发",
+        description: "描述"
+      },
       imgHeight: "", //轮播图高度
       homeBanner: [
         {
@@ -177,11 +187,21 @@ export default {
   created() {
     // 获取当前窗口宽度通过计算动态设置轮播图高度
     this.imgHeight = (document.body.clientWidth * 400) / 1390 + "px";
+  },
+  mounted() {
+    // 动态设置meta
+    setTimeout(() => {
+      this.pageName = "home";
+    }, 2000);
   }
 };
 </script>
 <style lang="less" scoped>
 .wrapper {
+  // 解决轮播图ie低版本滚动条问题
+  .el-carousel {
+    overflow: hidden;
+  }
   // element轮播图组件样式
   .homeBanner {
     width: 100%;

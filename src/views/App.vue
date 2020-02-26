@@ -23,7 +23,26 @@
     </div>
   </div>
 </template>
-
+<script>
+export default {
+  metaInfo: {
+    title:
+      "app定制-青玖科技-ios软件-安卓软件-定制开发-Android-专业团队",
+    meta: [
+      {
+        name: "keywords",
+        content:
+          "app定制,青玖科技,ios软件,安卓软件,定制开发,专业团队,Android"
+      },
+      {
+        name: "description",
+        content:
+          "青玖科技有限公司致力于创新开发简洁高效互联网产品,拥有十年从业经验的专业技术团队能够为客户提供小程序、公众号、网站定制开发、ios应用程序定制开发、Android应用程序定制开发、运维推广、服务器部署、软件运维推广、新媒体运营、企业营销等服务。青玖科技一站式服务平台期待您的到来"
+      }
+    ]
+  }
+};
+</script>
 <style lang="less" scoped>
 .wrapper {
   #appBodyer {

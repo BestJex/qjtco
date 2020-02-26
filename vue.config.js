@@ -2,8 +2,11 @@ const PrerenderSPAPlugin = require('prerender-spa-plugin');
 const Renderer = PrerenderSPAPlugin.PuppeteerRenderer;
 const path = require('path');
 module.exports = {
-    assetsDir: "static",
-    productionSourceMap:false,
+    assetsDir: "static", //静态资源打包到static文件夹
+    productionSourceMap: false,
+    devServer: {
+        proxy: 'http://127.0.0.1:3000'//json-server启动在3000端口，在此处配置vue-cli的代理服务
+    },
     configureWebpack: config => {
         if (process.env.NODE_ENV !== 'production') return;
         return {
@@ -13,7 +16,7 @@ module.exports = {
                     // 这个目录只能有一级，如果目录层次大于一级，在生成的时候不会有任何错误提示，在预渲染的时候只会卡着不动。
                     staticDir: path.join(__dirname, 'dist'),
                     // 此处填写需要预渲染页面路由path
-                    routes: ['/','/webSite','/applet','/account', '/app','/employ','/brand'],
+                    routes: ['/', '/webSite', '/applet', '/account', '/app', '/brand', '/about', '/employ', '/kit', '/contacts'],
                     renderer: new Renderer({
                         inject: {
                             foo: 'bar'
