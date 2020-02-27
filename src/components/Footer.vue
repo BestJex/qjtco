@@ -41,6 +41,7 @@
 
 <script>
 export default {
+  props: ["contacts"],
   data() {
     return {
       contactWay: {
@@ -51,15 +52,20 @@ export default {
         // 网站底部电话
         tel: "15241794625",
         // 网站底部客服QQ
-        qq: "1575246119"
+        qq: "1575246119+++"
       },
       footer: {
+        // 版权信息一般不会轻易改变此处信息不从服务器获取
         copyright: "Copyright © 2019 - 2020 QJTCO. All Rights Reserved.",
         icp: "吉ICP备19007084号",
         institutionCode: "组织机构代码:MA1798W50",
         vieID: "工商电子标识:91220108MA1798W501"
       }
     };
+  },
+  created(){
+    // 将父组件props传递过来的值赋给data中contactWay
+    this.contactWay = this.contacts;
   }
 };
 </script>

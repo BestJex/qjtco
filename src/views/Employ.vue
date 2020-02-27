@@ -104,8 +104,18 @@ export default {
     };
   },
   created() {
+    // axios获取contacts页面数据
+    this.$axios
+      .get("api/employ")
+      .then(res => {
+        // console.log(res.data);
+        this.employ = res.data.employ;
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
     // 判断是否有招聘信息如果无招聘信息页面显示“暂无招聘信息”，有则正常显示招聘信息。
-    this.employ.length == 0 ? this.employActive = true : this.employActive = false;
+    this.employ.length == 0 ? (this.employActive = true) : (this.employActive = false);
   }
 };
 </script>

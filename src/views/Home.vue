@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <el-carousel :height="imgHeight">
+    <el-carousel :height="bannerHeight">
       <el-carousel-item v-for="(item,index) in homeBanner" :key="index">
         <img class="homeBanner" :src="item.src" :alt="item.alt" />
       </el-carousel-item>
@@ -33,7 +33,7 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/app">
+            <router-link to="/appDevelopment">
               <i class="iconfont icon-ruanjiankaifabao"></i>
               <h3>APP定制</h3>
               <p>APP development</p>
@@ -133,7 +133,7 @@ export default {
           "网站定制,公众号定制,小程序定制,app定制,运营推广,营销,定制开发,做网站,做小程序,做软件,定制开发",
         description: "描述"
       },
-      imgHeight: "", //轮播图高度
+      bannerHeight: "", //轮播图高度
       homeBanner: [
         {
           src: "https://www.qjtco.com/assets/image/banner1.jpg",
@@ -185,8 +185,20 @@ export default {
     };
   },
   created() {
+    // axios获取home数据
+    this.$axios
+      .get("api/home")
+      .then(res => {
+        // console.log(res.data);
+        this.meta = res.data.meta;
+        this.homeBanner = res.data.homeBanner;
+        this.ourFriends = res.data.ourFriends;
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
     // 获取当前窗口宽度通过计算动态设置轮播图高度
-    this.imgHeight = (document.body.clientWidth * 400) / 1390 + "px";
+    this.bannerHeight = (document.body.clientWidth * 400) / 1390 + "px";
   },
   mounted() {
     // 动态设置meta

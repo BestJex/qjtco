@@ -59,8 +59,7 @@
 
 <script>
 export default {
-  components: {},
-  props: {},
+  props: ["contacts"],
   data() {
     return {
       contactWay: {
@@ -75,17 +74,20 @@ export default {
   },
   methods: {
     navbtn: function() {
-      if (this.navShow) {
-        this.navBtnClass = "iconfont icon-guanbi";
-      } else {
-        this.navBtnClass = "iconfont icon-daohang1";
-      }
-      this.navShow = !this.navShow; //通过navShow的取反控制是否绑定navActive类
+      // 通过class的变化控制导航按钮图标
+      this.navShow ? (this.navBtnClass = "iconfont icon-guanbi"): (this.navBtnClass = "iconfont icon-daohang1");
+      //通过navShow的取反控制是否绑定navActive类,控制菜单是否显示
+      this.navShow = !this.navShow;
     },
     navhidden: function() {
+      // 修复路由跳转后菜单不收起的bug
       this.navShow = !this.navShow;
       this.navBtnClass = "iconfont icon-daohang1";
     }
+  },
+  created() {
+    // 将父组件props传递过来的值赋给data中contactWay
+    this.contactWay = this.contacts;
   }
 };
 </script>

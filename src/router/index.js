@@ -77,9 +77,9 @@ const routes = [
   },
   {
     // app定制
-    path: '/app',
-    name: 'App',
-    component: () => import('../views/App.vue')
+    path: '/appDevelopment',
+    name: 'AppDevelopment',
+    component: () => import('../views/AppDevelopment.vue')
   }
 ]
 

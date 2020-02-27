@@ -11,7 +11,7 @@
       <div class="centent" v-html="newsDetail"></div>
       <!-- 路由传过来的资讯id -->
       <h3 style="text-align: center;">路由传参传递过来的新闻id：{{newsId}}</h3>
-      <input type="text" v-model="newsId" />
+      <!-- <input type="text" v-model="newsId" /> -->
 
       <div class="other">
         <span v-text="beforeNews.newsTitle" @click="newsChange(beforeNews.newsId)"></span>
@@ -56,13 +56,43 @@ export default {
   created() {
     // 存储vue-router通过paramss传参传过来的资讯id
     this.newsId = this.$route.params.newsId;
-    // 动态设置meta
+
+    // // 获取数据演示
+    // this.$axios
+    //   .get("api/newsDetails")
+    //   .then(res => {
+    //     // console.log(res.data);
+    //     this.meta = res.data.meta;
+    //     this.newsTitle = res.data.newsTitle;
+    //     this.newsDetail = res.data.newsDetail;
+    //     this.beforeNews = res.data.beforeNews;
+    //     this.nextNews = res.data.nextNews;
+    //   })
+    //   .catch(function(error) {
+    //     console.log(error);
+    //   });
+
   },
   watch: {
     newsId(val, oldval) {
-      // console.log(val);
-      // console.log(oldval);
-      // 监听newsId的变化当发生改变时重新请求新闻详情页数据
+      // axios获取newsDetails数据
+      this.$axios
+        .get("api/newsDetails", {
+          params: {
+            newsId: val
+          }
+        })
+        .then(res => {
+          // console.log(res.data);
+          this.meta = res.data.meta;
+          this.newsTitle = res.data.newsTitle;
+          this.newsDetail = res.data.newsDetail;
+          this.beforeNews = res.data.beforeNews;
+          this.nextNews = res.data.nextNews;
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
     }
   },
   methods: {
@@ -72,6 +102,7 @@ export default {
     }
   },
   mounted() {
+    // 动态设置meta
     setTimeout(() => {
       this.pageName = "NewsDetails";
     }, 2000);

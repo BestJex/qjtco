@@ -16,7 +16,7 @@ module.exports = {
                     // 这个目录只能有一级，如果目录层次大于一级，在生成的时候不会有任何错误提示，在预渲染的时候只会卡着不动。
                     staticDir: path.join(__dirname, 'dist'),
                     // 此处填写需要预渲染页面路由path
-                    routes: ['/', '/webSite', '/applet', '/account', '/app', '/brand', '/about', '/employ', '/kit', '/contacts'],
+                    routes: ['/', '/webSite', '/applet', '/account', '/appDevelopment', '/brand', '/about', '/employ', '/kit', '/contacts'],
                     renderer: new Renderer({
                         inject: {
                             foo: 'bar'

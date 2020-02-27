@@ -17,7 +17,8 @@
 <script>
 export default {
   metaInfo: {
-    title: "小工具-青玖科技-pdf转换工具-图片格式转换工具-视频下载工具-在线开发工具",
+    title:
+      "小工具-青玖科技-pdf转换工具-图片格式转换工具-视频下载工具-在线开发工具",
     meta: [
       {
         name: "keywords",
@@ -142,6 +143,18 @@ export default {
         }
       ]
     };
+  },
+  created() {
+    // axios获取首页数据
+    this.$axios
+      .get("api/kit")
+      .then(res => {
+        // console.log(res.data);
+        this.kitItem = res.data.kitItem;
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
   }
 };
 </script>

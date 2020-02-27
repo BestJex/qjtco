@@ -1,0 +1,32 @@
+{
+    "companyProfile": {
+        "title": "公司简介",
+        "content": "青玖科技(长春)有限公司,是一家以“互联网+”销售服务理念为基础、结合企业产品和服务的运营情况、创新开发简洁高效互联网产品的企业。服务涵盖微信公众号、微信小程序、网站、APP定制开发;计算机软件技术研发、新媒体运营、软件的运营与维护、广告设计、网络推广、网站建设、技术咨询、技术服务等。公司拥有十年经验专业技术团队，能够提供专业高效的技术服务。"
+    },
+    "publicBenefit": {
+        "title": "我们在行动",
+        "content": "在青玖科技，我们坚信对社会负责是我们商业模式的一部分。自公司创立至今，一直致力于支持和参与符合我们核心价值观和使命的公益和社会责任项目，以科技赋能公益事业，助力社会的发展。",
+        "publicBenefitImg": [
+            {
+                "src": "https://www.qjtco.com/assets/image/publicBenefit (1).jpg",
+                "alt": "为藏区募集救命药"
+            },
+            {
+                "src": "https://www.qjtco.com/assets/image/publicBenefit%20(2).jpg",
+                "alt": "吉青吉心工程"
+            },
+            {
+                "src": "https://www.qjtco.com/assets/image/publicBenefit (3).jpg",
+                "alt": "吉青吉心工程"
+            },
+            {
+                "src": "https://www.qjtco.com/assets/image/publicBenefit (4).jpg",
+                "alt": "吉青吉心工程"
+            },
+            {
+                "src": "https://www.qjtco.com/assets/image/publicBenefit (5).jpg",
+                "alt": "吉青吉心工程"
+            }
+        ]
+    }
+}

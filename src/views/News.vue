@@ -90,17 +90,40 @@ export default {
         }
       ],
       pageAll: 5, //总页码
-      pageNumber: 1, //当前页码
+      pageNumber: 1 //当前页码
     };
   },
   created() {
-
+    // axios获取news数据
+    this.$axios
+      .get("api/news")
+      .then(res => {
+        // console.log(res.data);
+        this.newsName = res.data.newsName;
+        this.pageAll = res.data.pageAll;
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
   },
   methods: {
     handleCurrentChange(val) {
       // 获取当前页码
       this.pageNumber = val;
       // console.log("当前是第"+this.pageNumber+"页")
+      this.$axios
+        .get("api/news", {
+          params: {
+            pageNumber: this.pageNumber
+          }
+        })
+        .then(res => {
+          // console.log(res.data);
+          this.newsName = res.data.newsName;
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
     }
   }
 };

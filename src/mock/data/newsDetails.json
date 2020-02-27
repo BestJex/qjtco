@@ -1,0 +1,17 @@
+{
+    "meta": {
+        "title": "资讯详情",
+        "keywords": "关键词",
+        "description": "描述"
+    },
+    "newsTitle": "[行业资讯]富文本编辑器输出测试",
+    "newsDetail": "<p>富文本编辑器输出内容</p>",
+    "beforeNews": {
+        "newsTitle": "[行业资讯]关于1234的重要通知",
+        "newsId": "1234"
+    },
+    "nextNews": {
+        "newsTitle": "[行业资讯]关于5678的重要通知",
+        "newsId": "5678"
+    }
+}

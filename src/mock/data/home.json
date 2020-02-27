@@ -1,0 +1,55 @@
+{
+    "meta": {
+        "title": "青玖科技有限公司官网-微信小程序定制-公众号定制-网站专业定制开发-app定制-运营推广-营销-十年从业经验专业技术团队",
+        "keywords": "网站定制,公众号定制,小程序定制,app定制,运营推广,营销,定制开发,做网站,做小程序,做软件,定制开发",
+        "description": "描述"
+    },
+    "homeBanner": [
+        {
+            "src": "https://www.qjtco.com/assets/image/banner1.jpg",
+            "alt": "网站、小程序、公众号、APP专业定制开发"
+        },
+        {
+            "src": "https://www.qjtco.com/assets/image/banner2.jpg",
+            "alt": "顶级品牌、顶级售后、顶级产品、办公工具、网址导航"
+        },
+        {
+            "src": "https://www.qjtco.com/assets/image/banner3.jpg",
+            "alt": "免费赠首年服务器、三个月免费运维、免费培训"
+        }
+    ],
+    "ourFriends": [
+        {
+            "src": "https://www.qjtco.com/assets/image/friends1.png",
+            "alt": "阿里巴巴"
+        },
+        {
+            "src": "https://www.qjtco.com/assets/image/friends2.png",
+            "alt": "腾讯公益"
+        },
+        {
+            "src": "https://www.qjtco.com/assets/image/friends3.png",
+            "alt": "途客租车"
+        },
+        {
+            "src": "https://www.qjtco.com/assets/image/friends4.png",
+            "alt": "壹想食"
+        },
+        {
+            "src": "https://www.qjtco.com/assets/image/friends5.png",
+            "alt": "腾讯"
+        },
+        {
+            "src": "https://www.qjtco.com/assets/image/friends6.png",
+            "alt": "Adobe"
+        },
+        {
+            "src": "https://www.qjtco.com/assets/image/friends7.png",
+            "alt": "新网"
+        },
+        {
+            "src": "https://www.qjtco.com/assets/image/friends8.png",
+            "alt": "微软"
+        }
+    ]
+}

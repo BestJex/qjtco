@@ -15,7 +15,8 @@
 <script>
 export default {
   metaInfo: {
-    title: "品牌-TopServer-青玖品牌-青玖科技-商标-微信公众号-小程序-网站-APP定制开发-售后服务-顶级服务",
+    title:
+      "品牌-TopServer-青玖品牌-青玖科技-商标-微信公众号-小程序-网站-APP定制开发-售后服务-顶级服务",
     meta: [
       {
         name: "keywords",
@@ -42,6 +43,18 @@ export default {
         ]
       }
     };
+  },
+  created() {
+    // axios获取brand页面数据
+    this.$axios
+      .get("api/brand")
+      .then(res => {
+        // console.log(res.data);
+        this.brand = res.data.brand;
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
   }
 };
 </script>

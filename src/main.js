@@ -18,11 +18,12 @@ Vue.use(MetaInfo)
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
+//把axios作为Vue的原型属性
+Vue.prototype.$axios = axios;
 // axios默认配置
 axios.defaults.baseURL = 'http://127.0.0.1:3000'; //设置axios默认baseURL
 axios.defaults.timeout = 5000;//设置请求超时时间
-//把axios作为Vue的原型属性
-Vue.prototype.$http = window.axios;
+
 
 
 // 版权声明及作者

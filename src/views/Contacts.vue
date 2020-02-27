@@ -35,11 +35,13 @@
 <script>
 export default {
   metaInfo: {
-    title: "联系我们-青玖科技-青玖科技联系方式-官方微信-电话-邮箱-服务号-客服-青玖科技地址",
+    title:
+      "联系我们-青玖科技-青玖科技联系方式-官方微信-电话-邮箱-服务号-客服-青玖科技地址",
     meta: [
       {
         name: "keywords",
-        content: "青玖科技联系方式,官方微信,电话,邮箱,微信服务号,客服,青玖科技地址"
+        content:
+          "青玖科技联系方式,官方微信,电话,邮箱,微信服务号,客服,青玖科技地址"
       },
       {
         name: "description",
@@ -62,76 +64,88 @@ export default {
         siteImg: "https://www.qjtco.com/assets/image/site.jpg"
       }
     };
+  },
+  created() {
+    // axios获取contacts页面数据
+    this.$axios
+      .get("api/contacts")
+      .then(res => {
+        // console.log(res.data);
+        this.contacts = res.data.contacts;
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
   }
 };
 </script>
 <style lang="less" scoped>
 .wrapper {
-  #contactsBodyer{
+  #contactsBodyer {
     width: 1200px;
     margin: 90px auto 130px;
     overflow: hidden;
-    h2{
-        margin:10px auto 30px;
-        text-align: center;
-        color: #3b3c3f;
-        font-size: 1.8em;
+    h2 {
+      margin: 10px auto 30px;
+      text-align: center;
+      color: #3b3c3f;
+      font-size: 1.8em;
     }
-    .contactsMsg{
-        div{
-            // width: 400px;
-            // height: 300px;
-            float: left;
-            margin: 40px;
-            img{
-                width: 400px;
-                height: 300px;
-            }
+    .contactsMsg {
+      div {
+        // width: 400px;
+        // height: 300px;
+        float: left;
+        margin: 40px;
+        img {
+          width: 400px;
+          height: 300px;
         }
-        ul{
-            display: block;
-            width: 700px;
-            height: 230px;
-            float: right;
-            margin: 40px auto;
-            line-height: 40px;
-            font-size: 1.2em;
-            padding-top: 70px;
-            li{
-                i{
-                    font-size: 1.5em;
-                    margin-right: 20px;
-                }
-                a{
-                    color: #000000;
-                }
-            }
+      }
+      ul {
+        display: block;
+        width: 700px;
+        height: 230px;
+        float: right;
+        margin: 40px auto;
+        line-height: 40px;
+        font-size: 1.2em;
+        padding-top: 70px;
+        li {
+          i {
+            font-size: 1.5em;
+            margin-right: 20px;
+          }
+          a {
+            color: #000000;
+          }
         }
+      }
     }
-}
-@media screen and (max-width: 1200px) {
-    #contactsBodyer{
-        margin: 40px auto 10px;
-        width: 100%;
-        .contactsMsg{
-            div{
-                width: 93%;
-                height: auto;
-                margin: 20px auto;
-                float: none;
-                img{
-                    width: 100%;
-                    height: auto;
-                }
-            }
-            ul{
-                width: 90%;
-                float: none;
-                margin: 20px auto;
-                padding-top:0 ;
-            }
+  }
+  @media screen and (max-width: 1200px) {
+    #contactsBodyer {
+      margin: 40px auto 10px;
+      width: 100%;
+      .contactsMsg {
+        div {
+          width: 93%;
+          height: auto;
+          margin: 20px auto;
+          float: none;
+          img {
+            width: 100%;
+            height: auto;
+          }
         }
+        ul {
+          width: 90%;
+          float: none;
+          margin: 20px auto;
+          padding-top: 0;
+        }
+      }
     }
-}
+  }
 }
 </style>
