@@ -10,6 +10,7 @@ server.use(jsonServer.rewriter({
     '/api/brand': '/api_brand',
     '/api/contacts': '/api_contacts',
     '/api/employ': '/api_employ',
+    '/api/kit': '/api_kit',
     '/api/news': '/api_news',
     '/api/newsDetails': '/api_newsDetails',
 }))
