@@ -81,6 +81,12 @@ const routes = [
     name: 'AppDevelopment',
     component: () => import('../views/AppDevelopment.vue')
   }
+  ,
+  {
+    // 路径错误时访问首页
+    path: '*',
+    component: Home
+  }
 ]
 
 const router = new VueRouter({

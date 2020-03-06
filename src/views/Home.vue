@@ -94,7 +94,7 @@
         <h3>Our Friends</h3>
         <ul>
           <li v-for="(item,index) in ourFriends" :key="index">
-            <img :src="item.src" :alt="item.alt" />
+            <img v-lazy="item.src" :alt="item.alt" />
           </li>
         </ul>
       </div>

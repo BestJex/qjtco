@@ -3,7 +3,7 @@
     <div id="footer">
       <div class="contactWay">
         <div class="weChat">
-          <img :src="contactWay.weChat" alt="青玖科技官方微信服务号" />
+          <img v-lazy="contactWay.weChat" alt="青玖科技官方微信服务号" />
           <h3>官方微信服务号</h3>
         </div>
         <ul>

@@ -18,6 +18,10 @@ Vue.use(MetaInfo)
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
+// 引入VueLazyload
+import VueLazyload from 'vue-lazyload'
+Vue.use(VueLazyload)
+
 //把axios作为Vue的原型属性
 Vue.prototype.$axios = axios;
 // axios默认配置
