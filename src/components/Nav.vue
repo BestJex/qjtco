@@ -73,13 +73,15 @@ export default {
     };
   },
   methods: {
-    navbtn: function() {
+    navbtn() {
       // 通过class的变化控制导航按钮图标
-      this.navShow ? (this.navBtnClass = "iconfont icon-guanbi"): (this.navBtnClass = "iconfont icon-daohang1");
+      this.navShow
+        ? (this.navBtnClass = "iconfont icon-guanbi")
+        : (this.navBtnClass = "iconfont icon-daohang1");
       //通过navShow的取反控制是否绑定navActive类,控制菜单是否显示
       this.navShow = !this.navShow;
     },
-    navhidden: function() {
+    navhidden() {
       // 修复路由跳转后菜单不收起的bug
       this.navShow = !this.navShow;
       this.navBtnClass = "iconfont icon-daohang1";
