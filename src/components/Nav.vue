@@ -163,11 +163,12 @@ export default {
             text-align: center;
             line-height: 40px;
             color: #000000;
-            &:hover {
-              background: #0092ff;
-              border-radius: 50px;
-              color: #ffffff;
-            }
+          }
+          // 根据路有变化改变导航样式
+          .router-link-exact-active {
+            background: #0092ff;
+            border-radius: 50px;
+            color: #ffffff;
           }
           .active {
             background: #0092ff;
@@ -250,9 +251,10 @@ export default {
               width: 100%;
               height: 100%;
               margin: 0;
-              &:hover {
-                border-radius: 0;
-              }
+            }
+            // 根据路有变化改变导航样式
+            .router-link-exact-active {
+              border-radius: 0;
             }
             .active {
               border-radius: 0;
