@@ -31,8 +31,9 @@ axios.defaults.timeout = 5000;//设置请求超时时间
 
 
 // 版权声明及作者
-console.log("©本站版权为青玖科技有限公司所有-未经许可不得盗用，违者将追究法律责任。This site copyright QING JIU Technology Corporation  all - without permission not to embezzle, offenders will beinvestigated for legal responsibility. ");
-console.log("作者：赵旭 邮箱：zhao_xu_d@163.com  author：zhaoxu Email：zhao_xu_d@163.com");
+console.warn("%c©未经许可不得盗用，违者追究法律责任。Do not embezzle without permission, offender is investigated for legal responsibility.","color:#dd001b;font-weight: bold;");
+console.warn("%c作者：赵旭 邮箱：zhao_xu_d@163.com  author：zhaoxu Email：zhao_xu_d@163.com","color:#007acc;font-weight: bold;");
+
 
 Vue.config.productionTip = false
 
